@@ -10,7 +10,7 @@ switch (type)
   
   
   case "gaussian"
-    bruit =  (a + randn(size(out)) * sqrt(b))
+    bruit =  (a + randn(size(out)) * b);
     out = out .+ bruit;
     out(out > 1) = 1;
     out(out < 0) = 0;
